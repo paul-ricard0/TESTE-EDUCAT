@@ -3,7 +3,7 @@
 
 * Para rodar o projeto, as dependências estão especificados no `requirements.txt`
 
-*`$ pip install -r requirements.txt`
+* `$ pip install -r requirements.txt`
 
 
 ## Parte02:
