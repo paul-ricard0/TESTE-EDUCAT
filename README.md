@@ -2,7 +2,8 @@
 * Necessário ter um SQL SERVER e o python 3.7 ou uma versão mais recente
 
 * Para rodar o projeto, as dependências estão especificados no `requirements.txt`
-`$ pip install -r requirements.txt`
+
+*`$ pip install -r requirements.txt`
 
 
 ## Parte02:

@@ -2,8 +2,6 @@ from datetime import datetime
 from os import getenv 
 import dotenv
 import openai
-import pyodbc
-
 
 dotenv.load_dotenv() 
 
@@ -30,11 +28,11 @@ def connect_db()-> pyodbc.Cursor:
 	cursor = conn.cursor()
 	return cursor
 
-def inserir_question(cursor, date_time_question, text_question: str) -> None:
+def inserir_question(cursor: pyodbc.Cursor, date_time_question: datetime.datetime, text_question: str) -> None:
     sql = "INSERT INTO question (date_time_question, text_question) VALUES (?, ?)"
     cursor.execute(sql, (date_time_question, text_question))
 
-def inserir_answer(cursor, id_question: int, date_time_answer, text_answer: str) -> None:
+def inserir_answer(cursor: pyodbc.Cursor, id_question: int, date_time_answer: datetime.datetime, text_answer: str) -> None:
     sql = "INSERT INTO answer (id_question, date_time_answer, text_answer) VALUES (?, ?, ?)"
     cursor.execute(sql, (id_question, date_time_answer, text_answer))
 
